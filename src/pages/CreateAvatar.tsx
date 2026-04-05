@@ -75,15 +75,7 @@ const CreateAvatar = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          videoLink1: 'NULL',
-          videoLink2: 'NULL',
-          videoLink3: 'NULL',
-          photo1: 'NULL',
-          photo2: 'NULL',
-          photo3: 'NULL'
-        })
+        body: JSON.stringify(formData)
       });
 
       setStatus('success');
