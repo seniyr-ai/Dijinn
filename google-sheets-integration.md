@@ -10,12 +10,10 @@ To seamlessly push form submissions from our `CreateAvatar.tsx` form into a Goog
    - B1: `name`
    - C1: `phone`
    - D1: `genre`
-   - E1: `socialLink`
-   - F1: `topVideosViews`
-   - G1: `topVideosEngagement`
-   - H1: `photo1`
-   - I1: `photo2`
-   - J1: `photo3`
+   - E1: `instagramUsername`
+   - F1: `followerCount`
+   - G1: `topVideosViews`
+   - H1: `topVideosEngagement`
 
 ## 2. Add Google Apps Script
 1. In your Google Sheet menu, click **Extensions > Apps Script**.
@@ -35,7 +33,7 @@ function doPost(e) {
       data.name || '',
       data.phone || '',
       data.genre || '',
-      data.socialLink || '',
+      data.instagramUsername || '',
       data.followerCount || '',
       data.topVideosViews || '',
       data.topVideosEngagement || ''

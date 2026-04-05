@@ -31,7 +31,7 @@ const CreateAvatar = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    socialLink: '',
+    instagramUsername: '',
     genre: '',
     topVideosViews: '',
     followerCount: '',
@@ -169,14 +169,14 @@ const CreateAvatar = () => {
                     </div>
 
                     <div className="form-field">
-                      <label htmlFor="socialLink">Primary Social Link</label>
+                      <label htmlFor="instagramUsername">Instagram Username</label>
                       <input
-                        type="url"
-                        id="socialLink"
-                        name="socialLink"
-                        placeholder="https://instagram.com/yourhandle"
+                        type="text"
+                        id="instagramUsername"
+                        name="instagramUsername"
+                        placeholder="@yourhandle"
                         required
-                        value={formData.socialLink}
+                        value={formData.instagramUsername}
                         onChange={handleChange}
                         disabled={status === 'submitting'}
                       />
