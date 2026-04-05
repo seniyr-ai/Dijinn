@@ -210,3 +210,11 @@
     padding: 2rem 1.5rem;
   }
 }
+
+.engagement-slider {
+  width: 100%;
+  accent-color: var(--accent-primary);
+  margin-top: 10px;
+  background: transparent;
+  cursor: pointer;
+}

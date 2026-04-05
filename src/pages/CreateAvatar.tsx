@@ -25,14 +25,7 @@ const viewTiers = [
   "Over 1M"
 ];
 
-const engagementTiers = [
-  "",
-  "Under 2%",
-  "2% - 5%",
-  "5% - 10%",
-  "10% - 20%",
-  "Over 20%"
-];
+
 
 const CreateAvatar = () => {
   const [formData, setFormData] = useState({
@@ -41,7 +34,8 @@ const CreateAvatar = () => {
     socialLink: '',
     genre: '',
     topVideosViews: '',
-    topVideosEngagement: ''
+    followerCount: '',
+    topVideosEngagement: '5'
   });
 
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -96,7 +90,7 @@ const CreateAvatar = () => {
         >
           <div className="create-header text-center">
             <h1>Create Your <span className="text-gradient">Avatar</span></h1>
-            <p>Ready to monetize your likeness? Submit the form below to initiate your digital twin creation process.</p>
+            <p>Ready to monetize your likeness? Submit the form below to Approve your digital twin creation process.</p>
           </div>
 
           <div className="form-container glass-card">
@@ -140,7 +134,7 @@ const CreateAvatar = () => {
                       />
                     </div>
                     <div className="form-field">
-                      <label htmlFor="phone">Phone Number</label>
+                      <label htmlFor="phone">WhatsApp Number</label>
                       <input
                         type="tel"
                         id="phone"
@@ -209,22 +203,38 @@ const CreateAvatar = () => {
                       </div>
                     </div>
                     <div className="form-field">
-                      <label htmlFor="topVideosEngagement">Avg. Engagement Rate</label>
-                      <div className="select-wrapper">
-                        <select
-                          id="topVideosEngagement"
-                          name="topVideosEngagement"
-                          required
-                          value={formData.topVideosEngagement}
-                          onChange={handleChange}
-                          disabled={status === 'submitting'}
-                        >
-                          <option value="" disabled>Select percentage...</option>
-                          {engagementTiers.slice(1).map((t) => (
-                            <option key={t} value={t}>{t}</option>
-                          ))}
-                        </select>
-                      </div>
+                      <label htmlFor="followerCount">Total Follower Count</label>
+                      <input
+                        type="text"
+                        id="followerCount"
+                        name="followerCount"
+                        placeholder="e.g. 50k, 1M"
+                        required
+                        value={formData.followerCount}
+                        onChange={handleChange}
+                        disabled={status === 'submitting'}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <div className="form-field full-width">
+                      <label htmlFor="topVideosEngagement">
+                        Avg. Engagement Rate ({formData.topVideosEngagement}%)
+                      </label>
+                      <input
+                        type="range"
+                        id="topVideosEngagement"
+                        name="topVideosEngagement"
+                        min="0"
+                        max="15"
+                        step="0.1"
+                        required
+                        value={formData.topVideosEngagement}
+                        onChange={handleChange}
+                        disabled={status === 'submitting'}
+                        className="engagement-slider"
+                      />
                     </div>
                   </div>
 

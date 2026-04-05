@@ -29,25 +29,6 @@ function doPost(e) {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
     const data = JSON.parse(e.postData.contents);
     
-    // Helper function to decode base64 and save to Google Drive
-    function saveFileToDrive(base64Data, filename) {
-      if (!base64Data) return '';
-      try {
-        const decoded = Utilities.base64Decode(base64Data);
-        // Default to image/jpeg if type isn't specified, but base64 itself works.
-        const blob = Utilities.newBlob(decoded, "image/jpeg", filename || "avatar_photo.jpg");
-        const file = DriveApp.createFile(blob);
-        file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
-        return file.getUrl();
-      } catch (err) {
-        return 'Error uploading file';
-      }
-    }
-
-    const photo1Url = saveFileToDrive(data.photo1, data.photo1Name);
-    const photo2Url = saveFileToDrive(data.photo2, data.photo2Name);
-    const photo3Url = saveFileToDrive(data.photo3, data.photo3Name);
-    
     // Add row logically appending what form sends
     sheet.appendRow([
       new Date(),
@@ -55,11 +36,9 @@ function doPost(e) {
       data.phone || '',
       data.genre || '',
       data.socialLink || '',
+      data.followerCount || '',
       data.topVideosViews || '',
-      data.topVideosEngagement || '',
-      photo1Url,
-      photo2Url,
-      photo3Url
+      data.topVideosEngagement || ''
     ]);
     
     return ContentService.createTextOutput(JSON.stringify({ status: 'success' }))
