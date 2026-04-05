@@ -105,7 +105,7 @@ const CreateAvatar = () => {
                 >
                   <CheckCircle2 size={64} className="success-icon" />
                   <h2>Application Received!</h2>
-                  <p>Our team will review your profile and reach out to outline the next steps in creating your AI persona. Keep an eye on your inbox.</p>
+                  <p>Our team will review your Instagram profile and reach out to you on WhatsApp.</p>
                   <button className="btn btn-secondary mt-4" onClick={() => setStatus('idle')}>
                     Submit Another
                   </button>
