@@ -16,12 +16,12 @@ const steps = [
   {
     icon: <Video size={32} />,
     title: 'Auto-Generate Promos',
-    description: 'Brands request endorsements. We review them, generate the video using your AI persona, and you approve it natively.'
+    description: 'Brands request endorsements. We review them, generate the Instagram content using your AI Avatar, and you approve it natively.'
   },
   {
     icon: <DollarSign size={32} />,
     title: 'Earn Passively',
-    description: 'You get paid for brand deals without ever setting foot on a set or filming a single second of footage.'
+    description: 'You just post content created by us without ever having to deal with brand and still get paid.'
   }
 ];
 

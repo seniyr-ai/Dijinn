@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <Sparkles size={16} className="text-gradient" style={{ marginRight: '8px' }} />
-            <span>The Future of Creator Endorsements</span>
+            <span>Platform by creators for creators</span>
           </motion.div>
           
           <motion.h1 
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Monetize Your Influence, <br />
-            <span className="text-gradient">Zero Screen Time Required.</span>
+            <span className="text-gradient">Zero Cost, No Extra Effort.</span>
           </motion.h1>
           
           <motion.p 
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            We create a photorealistic AI avatar of you. You grant consent. We secure brand deals, generate the promotional content, and send you the revenue. Welcome to effortless scaling.
+            We create a photorealistic AI avatar of you <strong>for FREE</strong>. You grant consent. We secure brand deals, generate the promotional content. Welcome to effortless scaling.
           </motion.p>
           
           <motion.div 

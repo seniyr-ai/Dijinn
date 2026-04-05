@@ -51,6 +51,7 @@
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .steps-grid::before {
     display: none;
   }
@@ -79,7 +80,7 @@
   font-size: 5rem;
   font-weight: 800;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.06);
   z-index: 0;
   pointer-events: none;
 }
