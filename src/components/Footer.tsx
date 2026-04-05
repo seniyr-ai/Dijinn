@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Dijinn. All rights reserved.</p>
           <div className="social-links">
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.instagram.com/dijinn.co?igsh=NXQ0dmZoOWt2NGhq" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </div>
       </div>
