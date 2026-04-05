@@ -23,26 +23,24 @@ const Footer: React.FC = () => {
           <div className="footer-links">
             <div className="link-group">
               <h4>Agency</h4>
-              <a href="#about">About</a>
-              <a href="#how-it-works">How It Works</a>
-              <a href="#creators">For Creators</a>
-              <a href="#brands">For Brands</a>
+              <Link to="/create">About</Link>
+              <Link to="/create">How It Works</Link>
+              <Link to="/create">For Creators</Link>
+              <Link to="/create">For Brands</Link>
             </div>
             <div className="link-group">
               <h4>Legal</h4>
-              <a href="#privacy">Privacy Policy</a>
-              <a href="#terms">Terms of Service</a>
-              <a href="#consent">Consent Architecture</a>
+              <Link to="/create">Privacy Policy</Link>
+              <Link to="/create">Terms of Service</Link>
+              <Link to="/create">Consent Architecture</Link>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} PersonaAI Agency. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Dijinn. All rights reserved.</p>
           <div className="social-links">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </div>
       </div>
