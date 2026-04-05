@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dijinn — Brand Identity</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1A1625; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 40px 24px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+  .sheet { width: 100%; max-width: 680px; display: flex; flex-direction: column; gap: 16px; }
+
+  .hero { background: #07060D; border-radius: 20px; padding: 56px 24px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+  .wordmark { display: flex; align-items: baseline; letter-spacing: 0.08em; line-height: 1; }
+  .wordmark .di { font-size: 44px; font-weight: 300; color: #A78BFA; }
+  .wordmark .jinn { font-size: 44px; font-weight: 700; color: #F5F0FF; letter-spacing: 0.06em; }
+
+  .variants { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+  .variant { border-radius: 12px; padding: 28px 16px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .variant.neutral { background: #F0EEF8; border: 0.5px solid #D8D4EE; }
+  .variant.dark { background: #07060D; }
+  .variant.light { background: #EDEAF8; }
+
+  .variant-lockup { display: flex; align-items: center; gap: 14px; }
+  .variant-label { font-size: 11px; letter-spacing: 0.14em; }
+  .variant.neutral .variant-label { color: #9990BB; }
+  .variant.dark .variant-label { color: #4B4668; }
+  .variant.light .variant-label { color: #9990BB; }
+
+  .wm-sm { display: flex; align-items: baseline; }
+  .wm-sm .di { font-size: 22px; font-weight: 300; letter-spacing: 0.06em; }
+  .wm-sm .jinn { font-size: 22px; font-weight: 700; letter-spacing: 0.04em; }
+  .variant.dark .wm-sm .di { color: #A78BFA; }
+  .variant.dark .wm-sm .jinn { color: #F5F0FF; }
+  .variant.light .wm-sm .di { color: #7C3AED; }
+  .variant.light .wm-sm .jinn { color: #1A0A3D; }
+
+  .palette { display: flex; align-items: center; gap: 10px; padding-top: 4px; }
+  .swatch { width: 32px; height: 32px; border-radius: 6px; }
+  .palette-label { font-size: 12px; color: #6B6488; margin-left: 6px; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="hero">
+    <svg width="130" height="130" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 14,8 L 38,8 C 94,8 102,26 102,55 C 102,84 94,102 38,102 L 14,102 Z M 38,23 C 80,23 87,36 87,55 C 87,74 80,87 38,87 Z M 57,30 L 68,30 L 68,80 L 57,80 Z" fill="#7C3AED" fill-rule="evenodd"/>
+    </svg>
+    <div class="wordmark">
+      <span class="di">Di</span><span class="jinn">jinn</span>
+    </div>
+  </div>
+
+  <div class="variants">
+
+    <div class="variant neutral">
+      <svg width="80" height="80" viewBox="0 0 110 110" fill="none">
+        <path d="M 14,8 L 38,8 C 94,8 102,26 102,55 C 102,84 94,102 38,102 L 14,102 Z M 38,23 C 80,23 87,36 87,55 C 87,74 80,87 38,87 Z M 57,30 L 68,30 L 68,80 L 57,80 Z" fill="#7C3AED" fill-rule="evenodd"/>
+      </svg>
+      <span class="variant-label">MARK ONLY</span>
+    </div>
+
+    <div class="variant dark">
+      <div class="variant-lockup">
+        <svg width="38" height="38" viewBox="0 0 110 110" fill="none">
+          <path d="M 14,8 L 38,8 C 94,8 102,26 102,55 C 102,84 94,102 38,102 L 14,102 Z M 38,23 C 80,23 87,36 87,55 C 87,74 80,87 38,87 Z M 57,30 L 68,30 L 68,80 L 57,80 Z" fill="#7C3AED" fill-rule="evenodd"/>
+        </svg>
+        <div class="wm-sm">
+          <span class="di">Di</span><span class="jinn">jinn</span>
+        </div>
+      </div>
+      <span class="variant-label">DARK</span>
+    </div>
+
+    <div class="variant light">
+      <div class="variant-lockup">
+        <svg width="38" height="38" viewBox="0 0 110 110" fill="none">
+          <path d="M 14,8 L 38,8 C 94,8 102,26 102,55 C 102,84 94,102 38,102 L 14,102 Z M 38,23 C 80,23 87,36 87,55 C 87,74 80,87 38,87 Z M 57,30 L 68,30 L 68,80 L 57,80 Z" fill="#7C3AED" fill-rule="evenodd"/>
+        </svg>
+        <div class="wm-sm">
+          <span class="di">Di</span><span class="jinn">jinn</span>
+        </div>
+      </div>
+      <span class="variant-label">LIGHT</span>
+    </div>
+
+  </div>
+
+  <div class="palette">
+    <div class="swatch" style="background: #07060D;"></div>
+    <div class="swatch" style="background: #7C3AED;"></div>
+    <div class="swatch" style="background: #A78BFA;"></div>
+    <div class="swatch" style="background: #F5F0FF; border: 0.5px solid #D8D4EE;"></div>
+    <span class="palette-label">brand palette</span>
+  </div>
+
+</div>
+</body>
+</html>
