@@ -1,0 +1,52 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.wordmark .di {
+  font-size: 26px;
+  font-weight: 300;
+  color: #A78BFA;
+}
+
+.wordmark .jinn {
+  font-size: 26px;
+  font-weight: 700;
+  color: #F5F0FF;
+  letter-spacing: 0.06em;
+}

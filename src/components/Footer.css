@@ -15,15 +15,28 @@
   flex-wrap: wrap;
 }
 
-.footer-brand h2 {
-  font-size: 2rem;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.footer-logo:hover {
+  transform: none;
 }
 
 .footer-brand p {
   color: var(--text-muted);
   font-size: 0.95rem;
   max-width: 300px;
+  margin-top: 0.5rem;
 }
 
 .footer-links {

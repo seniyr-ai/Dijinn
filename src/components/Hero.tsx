@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import brushingVideo from '../assets/brushing.mp4';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -41,12 +43,9 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <a href="#join" className="btn btn-primary">
-              Join the Waitlist <ArrowRight size={20} />
-            </a>
-            <a href="#demo" className="btn btn-secondary">
-              Watch Demo
-            </a>
+            <Link to="/create" className="btn btn-primary">
+              Create your avatar <ArrowRight size={20} />
+            </Link>
           </motion.div>
         </div>
         
@@ -59,14 +58,16 @@ const Hero: React.FC = () => {
           {/* Conceptual visual representing an AI Avatar transformation */}
           <div className="avatar-showcase">
             <div className="avatar-card glass-card">
-              <div className="avatar-image original"></div>
+              <video 
+                src={brushingVideo} 
+                className="avatar-video"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+              />
               <div className="scan-line"></div>
               <div className="avatar-image generated"></div>
-              <div className="tech-overlay">
-                <div className="tech-point" style={{ top: '30%', left: '40%' }}></div>
-                <div className="tech-point" style={{ top: '50%', left: '70%' }}></div>
-                <div className="tech-point" style={{ top: '70%', left: '30%' }}></div>
-              </div>
             </div>
           </div>
         </motion.div>

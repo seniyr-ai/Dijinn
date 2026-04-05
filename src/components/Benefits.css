@@ -71,6 +71,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .benefits-image-container {
+    display: none;
+  }
+}
+
 .benefits-image-container::before {
   content: '';
   position: absolute;
