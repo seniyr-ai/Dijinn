@@ -63,13 +63,35 @@ const CreateAvatar = () => {
         return;
       }
 
+      // Track uniqueness
+      let userIp = 'Unknown';
+      try {
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipRes.json();
+        userIp = ipData.ip;
+      } catch (err) {
+        console.log('Could not fetch IP');
+      }
+
+      let deviceId = localStorage.getItem('dijinn_device_id');
+      if (!deviceId) {
+        deviceId = Math.random().toString(36).substring(2) + Date.now().toString(36);
+        localStorage.setItem('dijinn_device_id', deviceId);
+      }
+
+      const payload = {
+        ...formData,
+        ipAddress: userIp,
+        deviceId: deviceId
+      };
+
       await fetch(scriptURL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(payload)
       });
 
       setStatus('success');

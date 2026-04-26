@@ -14,6 +14,8 @@ To seamlessly push form submissions from our `CreateAvatar.tsx` form into a Goog
    - F1: `followerCount`
    - G1: `topVideosViews`
    - H1: `topVideosEngagement`
+   - I1: `ipAddress`
+   - J1: `deviceId`
 
 ## 2. Add Google Apps Script
 1. In your Google Sheet menu, click **Extensions > Apps Script**.
@@ -36,7 +38,9 @@ function doPost(e) {
       data.instagramUsername || '',
       data.followerCount || '',
       data.topVideosViews || '',
-      data.topVideosEngagement || ''
+      data.topVideosEngagement || '',
+      data.ipAddress || '',
+      data.deviceId || ''
     ]);
     
     return ContentService.createTextOutput(JSON.stringify({ status: 'success' }))
