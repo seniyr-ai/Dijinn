@@ -54,7 +54,7 @@ const CreateAvatar = () => {
     setStatus('submitting');
 
     try {
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzRiG2diQkkfBxKQUfPobN6h34ktwLD1xyXDs6n-HMGOGdFgckQTDNbVH1NhZ8lp51n/exec"
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwJe4zRutFhBzxhyhtIbmpLwaGRtx0-GxSk2IR6BYbzVPuaSACW2iXEj0DMLm0rP1zb/exec"
 
       if (!scriptURL) {
         // If not set up yet, simulate success for demo purposes
